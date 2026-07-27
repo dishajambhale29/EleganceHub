@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Élégance Hub </title>
+    <link rel="stylesheet" href="dashboard.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+    <div class="page-shell">
+      <aside class="sidebar" id="sidebar">
+        <button class="close-btn" id="closeSidebar" aria-label="Close menu">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="brand">
+          <div class="brand-mark">EH</div>
+          <div>
+            <h3>Élégance Hub</h3>
+            <p>Salon Dashboard</p>
+          </div>
+        </div>
+
+        <nav class="nav-links">
+          <a class="active" href="#"><i class="fa-solid fa-house"></i><span>Dashboard</span></a>
+          <a href="#"><i class="fa-solid fa-calendar-plus"></i><span>Book Appointment</span></a>
+          <a href="#"><i class="fa-solid fa-scissors"></i><span>Services</span></a>
+          <a href="#"><i class="fa-solid fa-calendar-check"></i><span>My Bookings</span></a>
+          <a href="#"><i class="fa-solid fa-heart"></i><span>Favorites</span></a>
+          <a href="#"><i class="fa-solid fa-gift"></i><span>Offers</span></a>
+          <a href="#"><i class="fa-solid fa-user"></i><span>Profile</span></a>
+          <a href="#"><i class="fa-solid fa-right-from-bracket"></i><span>Logout</span></a>
+        </nav>
+
+        <div class="sidebar-card">
+          <p>Today’s vibe</p>
+          <h4>Glow and shine</h4>
+          <a href="#">View offers</a>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <div class="topbar-left">
+            <button class="menu-btn" id="menuToggle" aria-label="Open menu">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+            <div>
+              <p class="eyebrow">Welcome back</p>
+              <h1>Beautiful day</h1>
+            </div>
+          </div>
+
+          <div class="topbar-actions">
+            <label class="searchbar" aria-label="Search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="text" placeholder="Search services" />
+            </label>
+            <div class="profile-pill">
+              <div class="avatar">EH</div>
+              <div>
+              
+                
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <section class="hero-banner">
+          <div>
+            <p class="eyebrow">Premium salon experience</p>
+            <h2>Reserve your glow-up session before the weekend rush.</h2>
+            <p class="hero-text">
+              Enjoy expert styling, bridal prep, and relaxing beauty care with same-day availability.
+            </p>
+            <div class="hero-actions">
+              <a href="#" class="btn btn-primary">Book now</a>
+              <a href="#" class="btn btn-secondary">Explore services</a>
+            </div>
+          </div>
+          <div class="hero-card">
+            <p>Next appointment</p>
+            <h3>Bridal makeup</h3>
+            <ul>
+              <li><i class="fa-solid fa-calendar"></i> 28 July 2026</li>
+              <li><i class="fa-solid fa-clock"></i> 11:00 AM</li>
+              <li><i class="fa-solid fa-location-dot"></i> Élégance Hub</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="stats-grid">
+          <article class="stat-card">
+            <div class="icon-wrap"><i class="fa-solid fa-calendar-check"></i></div>
+            <div>
+              <h3>5</h3>
+              <p>Appointments</p>
+            </div>
+          </article>
+          <article class="stat-card">
+            <div class="icon-wrap"><i class="fa-solid fa-star"></i></div>
+            <div>
+              <h3>850</h3>
+              <p>Loyalty points</p>
+            </div>
+          </article>
+          <article class="stat-card">
+            <div class="icon-wrap"><i class="fa-solid fa-gift"></i></div>
+            <div>
+              <h3>4</h3>
+              <p>Offers active</p>
+            </div>
+          </article>
+          <article class="stat-card">
+            <div class="icon-wrap"><i class="fa-solid fa-heart"></i></div>
+            <div>
+              <h3>8</h3>
+              <p>Saved looks</p>
+            </div>
+          </article>
+        </section>
+
+        <section class="content-grid">
+          <div class="panel">
+            <div class="panel-header">
+              <h3>Upcoming appointment</h3>
+              <a href="#">View all</a>
+            </div>
+            <div class="appointment-card">
+              <div>
+                <h4>Luxury hair styling</h4>
+                <p><i class="fa-solid fa-calendar"></i> Thursday, 30 July</p>
+                <p><i class="fa-solid fa-clock"></i> 2:30 PM</p>
+                <p><i class="fa-solid fa-user"></i> Stylist: Maya</p>
+              </div>
+              <button class="btn btn-primary">Details</button>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-header">
+              <h3>Quick actions</h3>
+            </div>
+            <div class="quick-actions">
+              <a href="#" class="action-card"><i class="fa-solid fa-calendar-plus"></i><span>Book</span></a>
+              <a href="#" class="action-card"><i class="fa-solid fa-scissors"></i><span>Services</span></a>
+              <a href="#" class="action-card"><i class="fa-solid fa-gift"></i><span>Offers</span></a>
+              <a href="#" class="action-card"><i class="fa-solid fa-star"></i><span>Reviews</span></a>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-header">
+            <h3>Popular services</h3>
+            <a href="#">See more</a>
+          </div>
+          <div class="service-grid">
+            <article class="service-card">
+              <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=800&q=80" alt="Hair styling" />
+              <h4>Hair Styling</h4>
+              <p>Soft waves, glossy blowouts, and precision cuts.</p>
+            </article>
+            <article class="service-card">
+              <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80" alt="Facial treatment" />
+              <h4>Facial</h4>
+              <p>Hydrating treatments for a healthy, fresh complexion.</p>
+            </article>
+            <article class="service-card">
+              <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=800&q=80" alt="Bridal makeup" />
+              <h4>Bridal Makeup</h4>
+              <p>Elegant looks tailored for your special day.</p>
+            </article>
+            <article class="service-card">
+              <img src="https://images.unsplash.com/photo-1519415943484-9fa1873496d4?auto=format&fit=crop&w=800&q=80" alt="Nail art" />
+              <h4>Nail Art</h4>
+              <p>Trendy nails with premium polish and design.</p>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="dashboard.js"></script>
+  </body>
+</html>
