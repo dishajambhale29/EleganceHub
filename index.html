@@ -21,21 +21,28 @@
   <nav class="navbar">
     <div class="logo">Élégance Hub</div>
 
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#process">Process</a></li>
-      <li><a href="#testimonials">Testimonials</a></li>
-      <li><a href="#contact">Contact</a></li>
-    
-    </ul>
-     <div class="buttons">
+    <button class="menu-toggle" aria-label="Open menu">
+      <i class="fas fa-bars"></i>
+    </button>
 
-      <a href="login.html" class="login-btn">Login</a>
+    <div class="nav-panel" aria-hidden="true">
+      <button class="menu-close" aria-label="Close menu">
+        <i class="fas fa-times"></i>
+      </button>
 
-      <a href="register.html" class="register-btn">Register</a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
 
+      <div class="buttons">
+        <a href="login.html" class="login-btn">Login</a>
+        <a href="register.html" class="register-btn">Register</a>
+      </div>
     </div>
   </nav>
 </header>
@@ -317,6 +324,29 @@
     </div>
   </footer>
 
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const menuClose = document.querySelector('.menu-close');
+    const navPanel = document.querySelector('.nav-panel');
 
+    function closeMenu() {
+      navPanel.classList.remove('open');
+      navPanel.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('no-scroll');
+    }
+
+    function openMenu() {
+      navPanel.classList.add('open');
+      navPanel.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('no-scroll');
+    }
+
+    menuToggle.addEventListener('click', openMenu);
+    menuClose.addEventListener('click', closeMenu);
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+  </script>
 </body>
 </html>

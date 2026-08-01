@@ -34,6 +34,33 @@ body {
   font-weight: bold;
 }
 
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+.nav-panel {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.menu-close {
+  display: none;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 26px;
+  cursor: pointer;
+}
+
 .nav-links {
   display: flex;
   list-style: none;
@@ -960,30 +987,286 @@ footer {
 }
 
 /* ================= RESPONSIVE ================= */
-@media(max-width: 900px) {
-
+@media (max-width: 1024px) {
   .hero {
     flex-direction: column;
     text-align: center;
+    padding: 60px 40px;
   }
 
-  .services-grid,
-  .gallery-grid,
-  .cards {
-    grid-template-columns: 1fr;
+  .hero h1 {
+    font-size: 48px;
   }
 
-    .contact-container {
+  .hero-card {
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .testimonial-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .contact-container {
     flex-direction: column;
     align-items: center;
   }
 
-  .form-box, .info-box {
+  .form-box,
+  .info-box {
     width: 100%;
   }
 
   .navbar {
+    flex-wrap: wrap;
+    padding: 25px 40px;
+  }
+
+  .nav-links {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-panel {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: min(320px, 90vw);
+    height: 100vh;
+    background: rgba(15, 12, 45, 0.96);
+    backdrop-filter: blur(16px);
     flex-direction: column;
-    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 90px 24px 24px;
+    gap: 30px;
+    z-index: 1200;
+    transition: right 0.28s ease;
+  }
+
+  .nav-panel.open {
+    right: 0;
+  }
+
+  .menu-close {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .nav-links a {
+    color: #fff;
+    font-size: 18px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .buttons a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar {
+    justify-content: space-between;
+  }
+
+  .navbar .nav-panel {
+    display: flex;
+  }
+
+  .navbar .nav-links,
+  .navbar .buttons {
+    margin: 0;
+  }
+
+  .navbar .buttons {
+    gap: 12px;
+  }
+
+  .menu-close {
+    position: absolute;
+    top: 24px;
+    right: 20px;
+  }
+
+  .no-scroll {
+    overflow: hidden;
+  }
+
+  .hero {
+    padding: 45px 24px;
+    gap: 32px;
+  }
+  body {
+    padding-top: 80px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 24px;
+  }
+
+  .hero {
+    padding: 45px 24px;
+    gap: 32px;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .hero-left,
+  .hero-right {
+    width: 100%;
+  }
+
+  .buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .hero-card {
+    padding: 55px 30px;
+  }
+
+  .stats {
+    flex-wrap: wrap;
+    gap: 24px;
+    padding: 30px 20px;
+  }
+
+  .services-grid,
+  .gallery-grid,
+  .testimonial-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-card {
+    height: 220px;
+  }
+
+  .process {
+    padding: 70px 18px;
+  }
+
+  .title {
+    font-size: 34px;
+  }
+
+  .timeline::before {
+    left: 18px;
+  }
+
+  .left {
+    width: 40px;
+  }
+
+  .process-card {
+    margin-left: 20px;
+    padding: 22px;
+  }
+
+  .contact {
+    padding: 40px 24px;
+  }
+
+  .contact h1,
+  .testimonials h1,
+  .gallery h1 {
+    font-size: 40px;
+  }
+
+  .contact-container {
+    gap: 24px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 18px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 540px) {
+  body {
+    padding-top: 70px;
+  }
+
+  .navbar {
+    padding: 16px 18px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .logo {
+    font-size: 22px;
+  }
+
+  .hero {
+    padding: 30px 16px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero-card {
+    padding: 45px 24px;
+  }
+
+  .stats {
+    gap: 18px;
+    padding: 24px 16px;
+  }
+
+  .service-card,
+  .process-card,
+  .testimonial-card,
+  .card {
+    padding: 24px;
+  }
+
+  .gallery-card {
+    height: 200px;
+  }
+
+  .contact h1,
+  .testimonials h1,
+  .gallery h1 {
+    font-size: 32px;
+  }
+
+  .contact-container {
+    padding: 0;
   }
 }
