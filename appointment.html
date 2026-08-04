@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Appointment | Élégance Hub</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="appointment.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="back-link" href="index.html">
+          <i class="fa-solid fa-arrow-left"></i>
+          Back to Home
+        </a>
+
+        <div class="brand">
+          <span class="brand-mark">✦</span>
+          <h1>Book an Appointment</h1>
+        </div>
+      </header>
+
+      <main class="booking-layout">
+        <section class="form-card">
+          <div class="section-heading">
+            <p class="eyebrow">Personalized beauty care</p>
+            <h2>Reserve your perfect visit</h2>
+            <p>
+              Pick your preferred service, choose a date and time, and let us
+              prepare your luxury experience.
+            </p>
+          </div>
+
+          <form id="appointmentForm" novalidate>
+            <div class="input-group">
+              <label for="name">Full name</label>
+              <input id="name" name="name" type="text" placeholder="Your name" required />
+            </div>
+
+            <div class="input-group">
+              <label for="email">Email address</label>
+              <input id="email" name="email" type="email" placeholder="you@example.com" required />
+            </div>
+
+            <div class="input-group">
+              <label for="phone">Phone number</label>
+              <input id="phone" name="phone" type="tel" placeholder="your number" required />
+            </div>
+
+            <div class="input-group">
+              <label for="service">Service</label>
+              <select id="service" name="service" required>
+                <option value="">Choose a service</option>
+                <option value="Hair Styling">Hair Styling</option>
+                <option value="Facial Treatment">Facial Treatment</option>
+                <option value="Bridal Makeup">Bridal Makeup</option>
+                <option value="Nail Care">Nail Care</option>
+                <option value="Spa Relaxation">Spa Relaxation</option>
+              </select>
+            </div>
+
+            <div class="row">
+              <div class="input-group">
+                <label for="date">Preferred date</label>
+                <input id="date" name="date" type="date" required />
+              </div>
+
+              <div class="input-group">
+                <label for="time">Preferred time</label>
+                <input id="time" name="time" type="time" required />
+              </div>
+            </div>
+
+            <div class="input-group">
+              <label for="notes">Special notes</label>
+              <textarea id="notes" name="notes" rows="4" placeholder="Tell us about your preferences or occasion"></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">
+              <i class="fa-solid fa-calendar-check"></i>
+              Confirm booking
+            </button>
+          </form>
+
+          <div id="message" class="message" role="status" aria-live="polite"></div>
+        </section>
+
+        <aside class="summary-card">
+          <div class="summary-header">
+            <p class="eyebrow">Upcoming bookings</p>
+            <h3 id="bookingCount">0 appointments</h3>
+          </div>
+
+          <div id="bookingsList" class="bookings-list">
+            <p class="empty-state">No appointments yet. Your next booking will appear here.</p>
+          </div>
+        </aside>
+      </main>
+    </div>
+
+    <script src="appointment.js"></script>
+  </body>
+</html>
